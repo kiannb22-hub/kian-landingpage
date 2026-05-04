@@ -32,7 +32,7 @@ function useInView(threshold = 0.15) {
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
   return { ref, inView };
 }
@@ -172,7 +172,7 @@ export default function App() {
 
         <h1
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] tracking-tight mb-6 max-w-4xl"
-          style={{ animation: 'fadeUp 0.8s ease 0.1s forwards', opacity: 0 }}
+          style={{ animation: 'fadeUp 0.8s ease 0.1s forwards' }}
         >
           Få din musik{' '}
           <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
@@ -182,14 +182,14 @@ export default function App() {
 
         <p
           className="text-lg sm:text-xl text-white/55 max-w-xl leading-relaxed mb-10"
-          style={{ animation: 'fadeUp 0.8s ease 0.2s forwards', opacity: 0 }}
+          style={{ animation: 'fadeUp 0.8s ease 0.2s forwards' }}
         >
           Jeg hjælper upcoming artister med at finde deres lyd, blive skarpere i studiet og få deres sange færdige.
         </p>
 
         <div
           className="flex flex-col sm:flex-row items-center gap-3 mb-10"
-          style={{ animation: 'fadeUp 0.8s ease 0.3s forwards', opacity: 0 }}
+          style={{ animation: 'fadeUp 0.8s ease 0.3s forwards' }}
         >
           <a
             href={CALENDLY_URL}
@@ -213,14 +213,14 @@ export default function App() {
 
         <p
           className="text-sm text-white/35 max-w-sm"
-          style={{ animation: 'fadeUp 0.8s ease 0.4s forwards', opacity: 0 }}
+          style={{ animation: 'fadeUp 0.8s ease 0.4s forwards' }}
         >
           For artister der har idéer, tekster eller demos — men mangler retning.
         </p>
 
         <div
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
-          style={{ animation: 'fadeUp 1s ease 0.8s forwards', opacity: 0 }}
+          style={{ animation: 'fadeUp 1s ease 0.8s forwards' }}
         >
           <div className="w-px h-10 bg-gradient-to-b from-transparent to-white/20" />
         </div>
